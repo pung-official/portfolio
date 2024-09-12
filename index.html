@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Management</title>
+  <link rel="stylesheet" href="css/styles.css">
+  
+</head>
+<body>
+  <div class="container">
+    <h2>Create Empty Knowledge Entry</h2>
+  
+    <!-- Input for dataset name -->
+    <section class="form-section">
+      <input type="text" id="datasetName" placeholder="Enter Dataset Name" required style="width: auto">
+      <button id="createBtn">Create Knowledge Entry</button>
+    </section>
+
+    <hr>
+
+    <!-- Section to list all knowledge entries -->
+    <h2>List All Knowledge Entries</h2>
+    <section id="knowledgeList">
+      <button id="loadKnowledgeBtn">Load Knowledge Entries</button>
+      <div id="knowledgeContainer"></div> <!-- This will hold the list of knowledge entries -->
+      <p id="statusMessage"></p>
+    </section>
+
+    <hr>
+    
+
+    <!-- Section to upload file to a knowledge entry -->
+    <h2>Upload Document to Knowledge</h2>
+    <section id="uploadSection">
+      <button id="loadKnowledgeOption">Load Knowledge Entries</button>
+      <select id="datasetSelect">
+        <option value="">Select Knowledge Entry</option>
+        <!-- Options will be populated with knowledge entries -->
+      </select>
+      <input type="file" id="fileInput">
+      <button id="uploadBtn">Upload Document</button>
+      <p id="uploadStatus"></p>
+    </section>
+    
+    <hr>
+
+    <!-- Section to delete a knowledge entry -->
+    <h2>Delete Knowledge Entry</h2>
+    <section id="deleteSection">
+      <button id="loadKnowledgeForDelete">Load Knowledge Entries</button>
+      <select id="deleteDatasetSelect">
+        <option value="">Select Knowledge Entry</option>
+        <!-- Options will be populated with knowledge entries -->
+      </select>
+      <button id="deleteBtn">Delete Knowledge Entry</button>
+      <p id="deleteStatus"></p>
+    </section>
+
+    <hr>
+
+    <!-- Section to delete a document from a knowledge entry -->
+    <h2>Delete Document from Knowledge</h2>
+    <section id="deleteSection">
+      <button id="loadKnowledgeForDeleteLast">Load Knowledge Entries</button>
+      <label for="datasetSelectForDeleteLast">Select Knowledge Entry</label>
+      <select id="datasetSelectForDeleteLast">
+        <option value="">Select Knowledge Entry</option>
+        <!-- Options will be populated with knowledge entries -->
+      </select>
+      <label for="documentSelectForDeleteLast">Select Document ID</label>
+      <select id="documentSelectForDeleteLast">
+        <option value="">Select Document ID</option>
+        <!-- Options will be populated with documents -->
+      </select>
+      <button id="deleteBtnLast">Delete Document</button>
+      <p id="deleteStatusLast"></p>
+    </section>
+
+
+
+
+
+
+    
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,66 +1,12 @@
-<!DOCTYPE html>
-<html>
+https://docs.google.com/presentation/d/1Fx4Cxb_79p4zISbL3cRVuKwtTcngGdwHFW7F6byxN2I/edit?pli=1#slide=id.g2b8faf7b324_0_220
 
-<head>
-  <title>CSV Data Display</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-
-<body>
-  <div class="container">
-        <div class="row" style="color: #000">
-          <h2>This is Testing page</h2>
-        </div>
-
-        <div class="row" style="color: #000">
-          <div id="csv-data-container"></div>
-          <!-- CSV data will be dynamically populated here -->
-        </div>
-  </div>
+https://codepen.io/littlesnippets/pen/yVQJeW
 
 
-</body>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const container = document.getElementById("csv-data-container");
+AI what we can propose to our clients? In term of marketing.
 
-    fetch("your_csv_file.csv")  // Replace with the actual path to your CSV file
-      .then(response => response.text())
-      .then(data => {
-        const lines = data.split('\n').map(line => line.trim()).filter(line => line !== "");
-        console.log(lines);
-        const headers = lines[0].split(",").map(header => header.trim());
-        console.log(headers); // Log the headers to the console
+USAGE In the Industry:
+In slide 5
 
-        const template = "<p>Name: {name} <br/> TelePhone: {telephone} <br/> Description: {description}<br/> Image: {image}</p>";
-        let content = "";
 
-        for (let i = 1; i < lines.length; i++) {
-          const cells = lines[i].split(",");
-          if (cells.length > 0) {
-              const nameIndex = headers.indexOf("name"); // Adjust "name" to your actual column header, its the 0,1,2,3
-              const telephoneIndex = headers.indexOf("telephone");
-              const descriptionIndex = headers.indexOf("description");
-              const imageIndex = headers.indexOf("image");
-
-              const name = cells[headers.indexOf("name")];
-              const telephone = cells[headers.indexOf("telephone")];
-              const description = cells[descriptionIndex];
-              const image = cells[imageIndex];
-
-              const replacedTemplate = template
-                .replace("{name}", name)
-                .replace("{telephone}", telephone)
-                .replace("{description}", description)
-                .replace("{image}", image);
-              content += replacedTemplate;
-          }
-        }
-
-        container.innerHTML = content;
-      })
-      .catch(error => console.error("Error fetching CSV data:", error));
-  });
-</script>
-</html>
+1 second 100 points
